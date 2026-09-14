@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
+    <link rel="stylesheet" href="main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quán Cà Phê & Bánh</title>
+    <title>Quán Cà Phê - Thực Đơn</title>
 </head>
 <body>
+
+    <!-- Thẻ <header>: Chứa nội dung giới thiệu/mở đầu của trang, 
+         thường gồm logo, tên thương hiệu và menu điều hướng chính -->
     <header>
-        <h1>Quán Cà Phê & Bánh</h1>
-        <nav aria-label="Menu chính">
+
+        <!-- Logo và tên quán -->
+        <div class="branding">
+            <img src="images/logo.png" alt="Logo quán cà phê" width="60">
+            <h1>Góc Phố Cà Phê</h1>
+            <p class="slogan">Đậm đà hương vị - Ấm áp tình thân</p>
+        </div>
+
+        <!-- Thẻ <nav>: Đại diện cho một khối liên kết điều hướng chính của trang.
+             Mỗi liên kết trỏ đến từng section trong phần main (dùng thẻ neo #id) -->
+        <nav>
             <ul>
-                <li><a href="#coffee">Cà phê</a></li>
+                <li><a href="#coffee">Cà Phê</a></li>
                 <li><a href="#tea-cakes">Trà & Bánh</a></li>
-                <li><a href="#snacks">Món ăn nhẹ</a></li>
-                <li><a href="#service-hours">Thời gian phục vụ</a></li>
+                <li><a href="#snacks">Món Ăn Nhẹ</a></li>
+                <li><a href="#service-hours">Giờ Phục Vụ</a></li>
             </ul>
         </nav>
-    </header>
 
+    </header>
     <main>
+
+        <!-- Thẻ <section>: Phân chia tài liệu thành các phần riêng biệt theo chủ đề. Ở đây mỗi section là một danh mục món. -->
         <section id="coffee">
             <h2>Cà phê (Coffee)</h2>
-
+            
+            <!-- Thẻ <article>: Đại diện cho một nội dung độc lập, hoàn chỉnh, có ý nghĩa tự thân.
+                 Mỗi món ăn/thức uống là một article vì nó có tên, mô tả và giá riêng biệt. -->
             <article>
                 <h3>Cà Phê Đen Đá Phin</h3>
                 <p>Hương vị cà phê Robusta đậm đà truyền thống, pha phin nhỏ giọt.</p>
                 <p><strong>Giá:</strong> 25,000 VND</p>
-
+                
+                <!-- Sử dụng danh sách <ul> (Unordered list) để liệt kê thành phần không cần thứ tự -->
                 <h4>Thành phần:</h4>
                 <ul>
                     <li>Cà phê Robusta rang mộc</li>
@@ -50,7 +68,7 @@
 
         <section id="tea-cakes">
             <h2>Trà & Bánh (Tea & Cakes)</h2>
-
+            
             <article>
                 <h3>Trà Đào Cam Sả</h3>
                 <p>Thức uống thanh mát giải nhiệt với vị ngọt của đào, chua nhẹ của cam và thơm nồng của sả.</p>
@@ -80,12 +98,14 @@
 
         <section id="snacks">
             <h2>Món ăn nhẹ (Snacks)</h2>
-
+            
             <article>
                 <h3>Bánh Mì Chảo Đầy Đủ</h3>
                 <p>Món ăn sáng/trưa giàu năng lượng, phục vụ kèm bánh mì giòn rụm.</p>
                 <p><strong>Giá:</strong> 55,000 VND</p>
                 <h4>Thành phần:</h4>
+                <!-- Có thể thay <ul> bằng thẻ <dl> (Description List) nếu muốn mô tả chi tiết từng thành phần,
+                     nhưng <ul> phù hợp nhất cho danh sách nguyên liệu đơn giản -->
                 <ul>
                     <li>Trứng ốp la (2 quả)</li>
                     <li>Xúc xích Đức</li>
@@ -95,12 +115,15 @@
             </article>
         </section>
 
+        <!-- Section thông tin giờ mở cửa -->
         <section id="service-hours">
             <h2>Thời gian phục vụ</h2>
             <p>Chúng tôi luôn sẵn sàng phục vụ quý khách vào các ngày trong tuần.</p>
             <ul>
                 <li>
                     Thứ 2 - Thứ 6:
+                    <!-- Thẻ <time>: Biểu diễn một khoảng thời gian hoặc một thời điểm cụ thể,
+                         thuộc tính datetime giúp máy (như công cụ tìm kiếm) có thể đọc hiểu định dạng chuẩn. -->
                     <time datetime="06:30">06:30</time> đến <time datetime="22:30">22:30</time>
                 </li>
                 <li>
@@ -109,12 +132,19 @@
                 </li>
             </ul>
         </section>
+
     </main>
 
+    <!-- Thẻ <footer>: Chứa thông tin bổ sung cho trang như bản quyền, tác giả, địa chỉ, số liên hệ... -->
     <footer>
-        <p>© 2026 Quán Cà Phê & Bánh</p>
-        <p>Địa chỉ: 123 Nguyễn Huệ, Quận 1, TP.HCM</p>
-        <p>Hotline: 0909 123 456</p>
+        <!-- Thẻ <address>: Cung cấp thông tin liên hệ vật lý hoặc điện tử (địa chỉ, SĐT, email) cho thẻ lân cận hoặc toàn trang. -->
+        <address>
+            <p><strong>Địa chỉ:</strong> Số 123, Đường Huỳnh Văn Nghệ, Phường Trấn Biên, TP. Đồng Nai</p>
+            <p><strong>Đặt bàn gọi ngay:</strong> <a href="tel:+84123456789">0123 456 789</a></p>
+        </address>
+        
+        <p>&copy; 2026 The Riverside Coffee. Bảo lưu mọi quyền.</p>
     </footer>
+
 </body>
 </html>
